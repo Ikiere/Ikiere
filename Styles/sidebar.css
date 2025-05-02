@@ -1,0 +1,106 @@
+/* Default: Hide navbar and sidebar on desktop */
+.sidebar {
+    display: none;
+}
+.navbar i {
+    visibility: hidden;
+}
+/* Show sidebar and navbar for mobile and tablets */
+@media (max-width: 1024px) {
+    .sidebar {
+        display: block;
+        position: fixed;
+        left: -250px; /* Initially hidden */
+        top: 0;
+        width: 250px;
+        height: 100vh;
+        background: #0a0a0a;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+        transition: left 0.4s ease-in-out;
+        z-index: 1050;
+        padding-top: 60px;
+    }
+    .navbar i {
+        visibility: visible;
+    }
+    /* Place navbar inside sidebar */
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .navbar img {
+        width: 150px; /* Adjust logo size */
+        margin-bottom: 20px;
+    }
+
+    .navbar .nav-links {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+        display: none;
+    }
+     .navbar ul{
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+     }
+    .navbar ul li {
+        margin: 15px 0;
+        text-align: center;
+    }
+
+    /* Sidebar links */
+    .sidebar ul {
+        list-style: none;
+        padding: 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    .sidebar ul li {
+        padding: 15px 0;
+    }
+
+    .sidebar ul li a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 18px;
+        display: block;
+        transition: 0.3s;
+    }
+
+    .sidebar ul li a:hover {
+        color: #7cf03d;
+    }
+
+    /* Show sidebar when active */
+    .sidebar.active {
+        left: 0;
+    }
+
+    /* Menu Toggle Button */
+    .menu-toggle {
+        display: block;
+        font-size: 32px;
+        color: #fff;
+        cursor: pointer;
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        z-index: 1100;
+    }
+
+    /* Close Button */
+    .close-btn {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 28px;
+        color: #fff;
+        cursor: pointer;
+    }
+    
+}
