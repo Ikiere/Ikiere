@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
 :root{
     --background-color: #F5F5F5;
     --text-color: #fff;
-    --primary-color: #4B164C;
-    --secondary-color: #DD88CF;
+    --primary-color: #6C3BAA;
+    --secondary-color: #6C3BAA;
     --middle-color: #F8E7F6;
 }
 *{
@@ -24,7 +25,7 @@ a {
     color: var(--text-color);
 }
 .navbar {
-    position: fixed;
+    position: sticky;
     left: 0;
     top: 0;
     width: 100%;
@@ -40,6 +41,10 @@ a {
     /* border-top: 10px solid var(--secondary-color); */
     /* height: 70px; */
 }
+.navbar.scrolled {
+    background-color: rgba(40, 40, 40, 0.85); /* or any color you prefer */
+    backdrop-filter: blur(10px); /* optional for glass effect */
+}
 @keyframes showNavbar {
     0% {
         visibility: hidden;
@@ -50,27 +55,35 @@ a {
         opacity: 1;
     }
 }
-.navbar img {
-    width: 200px;
+.navbar .nav-links{
+    display: flex;
+    justify-content: center;
+}
+.navbar h1 {
+    font-family: "Lobster", sans-serif;
 }
 .navbar ul {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
+.btn-menu{
+    background: var(--secondary-color);
+    padding: 10px 30px 10px 30px;
+    border-radius: 10px;
+}
 .navbar ul li {
     list-style: none;
     margin-right: 35px;
 }
 .navbar ul li a {
-    font-size: 12px;
+    font-size: 17px;
     font-weight: 500;
     transition: .5s;
 }
 .navbar ul li:hover a,
 .navbar ul li.active a {
-    color: darkmagenta;
+    color: #6C3BAA;  
 }
 /* section 1 */
 .home{
@@ -93,9 +106,11 @@ a {
     background-size: cover;
     background-position: contain;
     background-repeat: no-repeat;
+    justify-content: center;
 }
 .home-info h1{
-    font-size: 55px;
+    font-size: 60px;
+    /* font-family: "Lobster", sans-serif; */
 }
 .home-info h2{
     display: inline-block;
@@ -122,8 +137,8 @@ a {
     content: attr(data-text);
     position: absolute;
     width: 0;
-    border-right: 2px solid darkmagenta;
-    color: darkmagenta;
+    border-right: 2px solid var(--secondary-color);
+    color: var(--secondary-color);
     white-space: nowrap;
     overflow: hidden;
     animation: fill-text 4s linear infinite;
@@ -261,7 +276,7 @@ a {
     top: 30px;
     width: 85%;
     object-fit: cover;
-    mix-blend-mode: screen;
+    
     z-index: 1; /* stays above blurred edges */
 }
 
