@@ -266,6 +266,28 @@ a {
 }
 
 
+.custom-shape-divider-bottom-1746538403 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1746538403 svg {
+    position: relative;
+    display: block;
+    width: calc(174% + 1.3px);
+    height: 64px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1746538403 .shape-fill {
+    fill: #282828;
+}
+
 /*.bars-animation{
     position: absolute;
     width: 100%;
