@@ -20,12 +20,20 @@ body{
 
 }
 
+.full-page{
+    display: flex;
+    flex-direction: column;
+    background: url('../assets/grid\ bg.jpeg');
+    background-size: cover;
+    background-position: contain;
+    background-repeat: no-repeat;
+}
 a {
     text-decoration: none;
     color: var(--text-color);
 }
 .navbar {
-    position: sticky;
+    position: fixed;
     left: 0;
     top: 0;
     width: 100%;
@@ -33,16 +41,15 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background: transparent;
     z-index: 1000;
     visibility: hidden;
     opacity: 0;
     animation: showNavbar 1.5s linear forwards;
     animation-delay: 1.2s;
-    /* border-top: 10px solid var(--secondary-color); */
-    /* height: 70px; */
 }
 .navbar.scrolled {
-    background-color: rgba(40, 40, 40, 0.85); /* or any color you prefer */
+    background-color: rgba(40, 40, 40, 0.85); 
     backdrop-filter: blur(10px); /* optional for glass effect */
 }
 @keyframes showNavbar {
@@ -102,10 +109,6 @@ a {
     /* background-blend-mode: overlay; */
     /* opacity: 0.8; */
     position: relative;
-    background: url('../assets/grid\ bg.jpeg');
-    background-size: cover;
-    background-position: contain;
-    background-repeat: no-repeat;
     justify-content: center;
 }
 .home-info h1{
@@ -173,7 +176,7 @@ a {
     font-size: 16px;
     color: #fff;
     font-weight: 600;
-    border-radius: 40px;
+    border-radius: 10px;
     transition: .5s;
 }
 .btn:hover{
@@ -199,6 +202,7 @@ a {
     color: #fff;
     box-shadow: 0 0 10px var(--secondary-color);
 }
+/* home img starts here */
 .home-img .img-box{
     width: 32vw;
     height: 32vw;
@@ -229,23 +233,17 @@ a {
         transform: rotate(360deg);
     }
 }
-/* .img-box{
-    filter: blur(10px);
-} */
 .home-img .img-box .img-item{
     width: 100%;
     height: 100%;
    
     background-size: cover;
-    /* background-blend-mode: multiply; */
-    /* opacity: 0.8; */
     border-radius: 50%;
     position: relative;
     display: flex;
     justify-content: center;
     overflow: hidden;
     z-index: 1;
-    /* border: .1px solid var(--primary-color); */
 }
 
 .home-img .img-box .img-item img{
@@ -279,7 +277,47 @@ a {
     
     z-index: 1; /* stays above blurred edges */
 }
+.home-img .corner-img {
+    position: absolute;
+    width: 100px; /* adjust size as needed */
+    height: auto;
+    z-index: 2;
+}
+.home-img .corner-img2 {
+    position: absolute;
+    width: 100px; /* adjust size as needed */
+    height: auto;
+    z-index: 2;
+}
 
+/* Position top-right */
+.home-img  .top-right {
+    top: 0;
+    right: 0;
+    transform: translate(30%, -30%);
+    animation: float 3s ease-in-out infinite;
+}
+.home-img  .bottom-left {
+    bottom: 0;
+    left: 0;
+    transform: translate(-30%, 30%);
+    animation: float 3s ease-in-out infinite;
+}
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* home img ends here */
 
 .custom-shape-divider-bottom-1746538403 {
     position: absolute;
@@ -300,39 +338,9 @@ a {
 }
 
 .custom-shape-divider-bottom-1746538403 .shape-fill {
-    fill: #282828;
+    fill: var(--primary-color);
 }
 
-/*.bars-animation{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    z-index: -1;
-}
-.bars-animation .bar{
-    width: 100%;
-    height: 100%;
-    background: #1f242d;
-    transform: translateY(-100%);
-    animation: show-bars .5s ease-in-out forwards;
-    animation-delay: calc(.1s * var(--i));
-}
-@keyframes show-bars{
-    100%{
-        transform: translateY(0%);
-    }
-}*/
-
-@media (max-width: 768px) {
-    .home-img .img-box {
-        width: 50vw;
-        height: 50vw;
-    }
-    .navbar i {
-        visibility: visible;
-    }
-}
 
 
 /* Tablet (max-width: 1024px) */
@@ -382,8 +390,21 @@ a {
        flex-direction: row;
        justify-content: center;
        margin-bottom: 30px;
+       background: #6C3BAA;
 }
-
+.about-card{
+    display: flex;
+    gap: 10px;
+}
+.about-22{
+    display: flex;
+    gap: 30px;
+    color: #fff;
+}
+.icon{
+    width: 40px;
+    filter: invert();
+}
 .about {
     display: flex;
     flex-direction: column;

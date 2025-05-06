@@ -15,7 +15,7 @@ for (let i = 0; i < faq.length; i++) {
 // Navbar scroll background toggle logic
 window.addEventListener('scroll', function () {
     const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 10) {
+    if (window.scrollY > 0) {
         navbar.classList.add('scrolled');
     } else {
         navbar.classList.remove('scrolled');
