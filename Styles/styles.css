@@ -89,7 +89,7 @@ a {
     /* background-blend-mode: overlay; */
     /* opacity: 0.8; */
     position: relative;
-    background: url(/assets/grid\ bg.jpeg);
+    background: url(../assets/grid\ bg.jpeg);
     background-size: cover;
     background-position: contain;
     background-repeat: no-repeat;
