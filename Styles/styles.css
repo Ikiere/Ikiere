@@ -15,7 +15,7 @@
 }
 
 body{
-    background: #282828;
+    background: #000;
 
 }
 
@@ -37,7 +37,7 @@ a {
     opacity: 0;
     animation: showNavbar 1.5s linear forwards;
     animation-delay: 1.2s;
-    border-top: 10px solid var(--secondary-color);
+    /* border-top: 10px solid var(--secondary-color); */
     /* height: 70px; */
 }
 @keyframes showNavbar {
@@ -213,7 +213,7 @@ a {
 .home-img .img-box .img-item{
     width: 100%;
     height: 100%;
-    background: url(../assets/grade.jpg);
+    background: #000;
     background-size: cover;
     /* background-blend-mode: multiply; */
     /* opacity: 0.8; */
@@ -223,7 +223,7 @@ a {
     justify-content: center;
     overflow: hidden;
     z-index: 1;
-    border: .1px solid var(--primary-color);
+    /* border: .1px solid var(--primary-color); */
 }
 
 .home-img .img-box .img-item img{
@@ -481,14 +481,14 @@ a {
     font-weight: 700;
     font-size: 45px;
     line-height: 57px;
-    color: darkmagenta;
+    color: #fff;
     text-transform: uppercase;
 }
 .faq-heading p{
     font-weight: 400;
     font-size: 13px;
     line-height: 20px;
-    color: #7a719b;
+    color: #fff;
     max-width: 461px;
 }
 .faq-content{
@@ -538,7 +538,7 @@ a {
     font-weight: 700;
     font-size: 22.625px;
     line-height: 31px;
-    color: darkmagenta;
+    color: #fff;
 }
 .faq-box-answer{
     max-height: 0px;
@@ -549,7 +549,7 @@ a {
     font-weight: 400;
     font-size: 13.175px;
     line-height: 20px;
-    color: #7A719B;
+    color: #fff;
     padding-top: 20px;
 }
 .faq-box-icon{
@@ -561,7 +561,7 @@ a {
 }
 .faq-box-icon::before,
     .faq-box-icon::after{
-        background: darkmagenta;
+        background: #fff;
         content: '';
         position: absolute;
         height: 100%;
@@ -582,7 +582,7 @@ a {
         transform: rotate(0deg);
     }
     .faq-box-question.active h4{
-        color: #3B2A82;
+        color: #fff;
     }
     /* all resposive starts here */
     @media(max-width:1200px){
