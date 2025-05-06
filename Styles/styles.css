@@ -2,7 +2,7 @@
 
 :root{
     --background-color: #F5F5F5;
-    --text-color: #333;
+    --text-color: #fff;
     --primary-color: #4B164C;
     --secondary-color: #DD88CF;
     --middle-color: #F8E7F6;
@@ -15,13 +15,13 @@
 }
 
 body{
-    background: #000;
+    background: #282828;
 
 }
 
 a {
     text-decoration: none;
-    color: #1f242d;
+    color: var(--text-color);
 }
 .navbar {
     position: fixed;
